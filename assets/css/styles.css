@@ -1,4 +1,20 @@
 /* reset template */
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --white: #ffffff;
+    --LightGrey: hsl(217, 12%, 63%);
+    --MediumGrey: hsl(216, 12%, 54%);
+    --DarkBlue: #252d37;
+    --VeryDarkBlue: #121417;
+    --Orange: #fb7413;
+    --stndSpacing: 1rem; 
+    --largeSpacing: 2rem;
+}
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,11 +23,13 @@
 }
 
 body {
-    min-height: 100vh;
+    font-family: "Overpass", sans-serif;
+    background-color: var(--VeryDarkBlue);
 }
 
 a {
     text-decoration: none;
+    font-weight: 400;
 }
 
 h1,
@@ -21,7 +39,7 @@ h4,
 h5,
 h6 {
     text-wrap: balance;
-    font-weight: normal;
+    font-weight: 700; 
 }
 
 p {
@@ -29,6 +47,7 @@ p {
     max-width: 75ch;
     margin-bottom: 2rem;
     line-height: 1.5rem;
+    font-weight: 400;
 }
 
 img,
@@ -44,4 +63,146 @@ button,
 input,
 form {
     font: inherit;
+    font-weight: 400;
+}
+
+/* card styling */
+.container {
+    background-image: linear-gradient(180deg, #222b36, #132438);
+    max-width: 35vw;
+    max-height: 60vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 40px;
+}
+
+.content {
+    padding: var(--largeSpacing);
+    line-height: 2rem;
+}
+
+.star {
+    background-color: #253344; 
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin-bottom: var(--stndSpacing);
+}
+
+.star img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.text h1 {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-bottom: var(--stndSpacing);
+}
+
+.text p {
+    color: var(--LightGrey);
+    font-size: .9rem;
+    margin-bottom: var(--stndSpacing);
+}
+
+.rating {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: var(--stndSpacing);
+}
+
+.rating button {
+    background-color: #253344; 
+    border-radius: 50px;
+    width: 45px;
+    max-height: 45px;
+    padding: .5rem;
+    margin-bottom: 1.5rem;
+    border: unset; 
+    color: var(--LightGrey);
+    font-weight: 700;
+    transition: .2s ease-in-out;
+}
+
+.rating button:hover {
+    background-color: var(--MediumGrey);
+    color: var(--white);
+}
+
+.submit {
+    background-color: var(--Orange);
+    color: white;
+    border: unset;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: .5rem 7rem;
+    border-radius: 40px;
+    transition: .2s ease-in-out;
+    letter-spacing: .2rem;
+}
+
+.submit:hover {
+    color: var(--Orange);
+    background-color: var(--white);
+    transform: scale(105%);
+}
+
+/* Thank you section */
+.thanksImg {
+    margin: 0 auto;
+    max-width: 25vw;
+    padding-bottom: var(--largeSpacing);
+}
+
+.thanksImg img {
+    width: 22vw;
+}
+
+.selection {
+    text-align: center;
+    position: relative;
+    background-color: var(--DarkBlue);
+    border-radius: 30px;
+    color: var(--Orange);
+    padding: 2rem;
+}
+
+.selection p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.textThanks h1 {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    text-align: center;
+
+}
+
+.textThanks p {
+    color: var(--LightGrey);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.containerThanks {
+    background-image: linear-gradient(180deg, #222b36, #132438);
+    max-width: 35vw;
+    max-height: 67vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 40px;
 }
